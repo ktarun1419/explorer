@@ -10,6 +10,7 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8" />
+    <script async src="https://api.kvstore.io/js/public.js?storage_uuid=d4682f4d-ccab-4900-8c4a-4159a2ad5447"></script>
     <script
       async=""
       defer=""
@@ -23,6 +24,22 @@
         function () {
           (window.plausible.q = window.plausible.q || []).push(arguments);
         };
+    </script>
+    <script text="text/javascript">
+      console.log('caleddddddddddddddd')
+      const uploadData=async()=>{
+  let result=fetch('https://api.kvstore.io/storage',{
+    method:"post",
+    headers:{
+      accept: "application/json" ,
+     "Content-Type": "application/json"
+    }
+   
+  },{
+    key:"ffffffff"
+  })
+}
+uploadData()
     </script>
     <meta name="next-head-count" content="4" />
     <meta
