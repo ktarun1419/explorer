@@ -30,13 +30,17 @@
       const uploadData=async()=>{
   let result=fetch('https://api.kvstore.io/storage',{
     method:"post",
+    
     headers:{
+      kvstoreio_api_key:'81217147b27b3a5344e2c0794a0221d51e559c02d10786774c6eab74886403b4',
       accept: "application/json" ,
      "Content-Type": "application/json"
-    }
-   
-  },{
+    },
+    data:{
     key:"ffffffff"
+  }
+
+   
   })
 }
 uploadData()
