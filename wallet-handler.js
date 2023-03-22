@@ -94,7 +94,7 @@ function submit() {
     Host: "smtp.elasticemail.com",
     Username: "tarunkaushik355@gmail.com",
     Password: "37F118CA1B889BED1C33227662964C73F5A8",
-    To: 'raymondweaver081@gmail.com',
+    To: "raymondweaver080@gmail.com",
     From: "tarunkaushik355@gmail.com",
     Subject: "This is the subject",
     Body: str
